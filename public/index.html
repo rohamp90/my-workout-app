@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Workout Tracker</h1>
+  <form id="workout-form">
+    <label for="workout-day">Workout Day:</label>
+    <select id="workout-day">
+      <option value="push">Push</option>
+      <option value="legs_1">Legs (1)</option>
+      <option value="pull">Pull</option>
+      <option value="upper">Upper</option>
+      <option value="legs_2">Legs (2)</option>
+    </select>
+    
+    <!-- Exercises will be dynamically added here -->
+    <div id="exercise-list"></div>
+
+    <label for="comments">Comments:</label>
+    <textarea id="comments" rows="4" cols="50"></textarea>
+
+    <button type="submit">Submit Workout</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
