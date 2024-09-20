@@ -62,23 +62,41 @@ button:hover {
 }
 
 .set {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
-  margin-bottom: 10px; /* Space between sets */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns for Weight and Reps */
+  grid-gap: 10px; /* Adds space between the columns */
+  margin-bottom: 15px; /* Adds spacing between sets */
 }
 
 .set label {
+  grid-column: span 2; /* Make the set label span both columns */
+  font-size: 1.1em;
   margin-bottom: 5px;
-  font-size: 1.1em; /* Increase label size */
 }
 
 input[type="text"] {
-  width: 100px; /* Wider input field */
-  margin-bottom: 5px;
-  padding: 8px; /* More padding for a comfortable input */
-  border: 1px solid #777; /* Subtle input border */
+  width: 100%; /* Ensure inputs fit inside the grid */
+  padding: 10px; /* Add padding for better aesthetics */
+  box-sizing: border-box; /* Ensure padding doesn’t break layout */
+  border: 1px solid #777;
   border-radius: 4px;
-  background-color: #444; /* Dark input background */
-  color: #e0e0e0; /* Light input text */
+  background-color: #444; /* Dark background for inputs */
+  color: #e0e0e0; /* Light text color */
 }
+
+.container {
+  max-width: 600px; /* Set a max width to avoid overflow */
+  margin: 0 auto; /* Center the content */
+  padding: 20px;
+}
+
+.highlight-weight {
+  font-weight: bold;
+  color: red;
+}
+
+.right-align {
+  display: block;
+  text-align: right;
+}
+

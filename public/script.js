@@ -18,10 +18,13 @@ workoutDaySelect.addEventListener('change', async function() {
     exercises.forEach(exercise => {
       const exerciseItem = document.createElement('div');
       exerciseItem.classList.add('exercise-item');
-
-      // Use exercise.exerciseName to access the name
+    
+      // Use exercise.highestWeightFor12Reps to display the max weight from the last workout
       exerciseItem.innerHTML = `
-        <label>${exercise.exerciseName}</label>
+        <label>${exercise._doc.exerciseName}</label>
+        <small class="right-align" >Previous best: 
+          <span class="highlight-weight">${exercise.highestWeightFor12Reps}</span> lbs
+        </small>
         <div class="sets">
           ${[1, 2, 3].map(i => `
             <div class="set">
@@ -32,10 +35,10 @@ workoutDaySelect.addEventListener('change', async function() {
           `).join('')}
         </div>
       `;
-
-      // Append the exercise item to the exercise list
+    
       exerciseList.appendChild(exerciseItem);
     });
+    
   } catch (error) {
     console.error('Error fetching exercises:', error);
   }
