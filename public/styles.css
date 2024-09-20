@@ -1,46 +1,84 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  form {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  label, select, textarea, button {
-    display: block;
-    margin: 10px 0;
-    width: 100%;
-  }
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+}
 
-  .exercise-item {
-    margin-bottom: 20px;
-  }
-  
-  .sets {
-    display: flex;
-    gap: 20px; /* Space between sets */
-  }
-  
-  .set {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the items horizontally */
-  }
-  
-  .set label {
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"] {
-    width: 80px; /* Adjust width as needed */
-    margin-bottom: 5px;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffeb3b; /* Bright accent color */
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #1e1e1e; /* Form background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+select, textarea, button {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #555; /* Subtle border */
+  background-color: #333; /* Dark input background */
+  color: #e0e0e0; /* Light input text */
+}
+
+select:focus, textarea:focus, button:focus {
+  outline: none;
+  border-color: #ffeb3b; /* Highlight border on focus */
+}
+
+button {
+  background-color: #ffeb3b; /* Button background */
+  color: #121212; /* Button text */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #fdd835; /* Lighter button on hover */
+}
+
+.exercise-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #555; /* Subtle border around exercise items */
+  border-radius: 6px;
+  background-color: #292929; /* Darker background for exercises */
+}
+
+.set {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  margin-bottom: 10px; /* Space between sets */
+}
+
+.set label {
+  margin-bottom: 5px;
+  font-size: 1.1em; /* Increase label size */
+}
+
+input[type="text"] {
+  width: 100px; /* Wider input field */
+  margin-bottom: 5px;
+  padding: 8px; /* More padding for a comfortable input */
+  border: 1px solid #777; /* Subtle input border */
+  border-radius: 4px;
+  background-color: #444; /* Dark input background */
+  color: #e0e0e0; /* Light input text */
+}
